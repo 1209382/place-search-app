@@ -8,11 +8,10 @@ import pandas as pd
 ############################################################
 # CONFIG                                                   #
 ############################################################
-KAKAO_REST_API_KEY = ([kakao]
-rest_api_key = "Kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
-    st.secrets.get("kakao", {}).get("rest_api_key")
-    or os.getenv("KAKAO_REST_API_KEY", "")
++KAKAO_REST_API_KEY = (
++    st.secrets.get("kakao", {}).get("rest_api_key")
++    or os.getenv("KAKAO_REST_API_KEY", "")
++)
 )
 
 HEADERS = {"Authorization": f"KakaoAK {KAKAO_REST_API_KEY}"}
